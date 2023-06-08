@@ -1,0 +1,53 @@
+.recipe {
+  &-container {
+    padding: 0 3px 14px 25px;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #131823;
+    margin: 24px 0 0 0;
+    border-radius: 6px;
+  }
+  &-item {
+    color: #FFF;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: 'Helvetica Neue', serif;
+    flex-basis: 50%;
+    margin-top: 14px;
+    margin-bottom: 1px;
+
+    &-name {
+      font-family: 'Helvetica Neue', serif;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 13px;
+      line-height: 24px;
+      color: #7185AA;
+      margin-bottom: 1px;
+    }
+
+    &-value {
+      &_neutral {
+        color: #FFF;
+      }
+
+      &_green {
+        background: linear-gradient(136.39deg, #2BF1E5 3.18%, #40E33D 102.04%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      &_orange {
+        background: linear-gradient(136.39deg, #FFBF43 3.18%, #FF4869 102.04%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      &_red {
+        color: #FB2047
+      }
+    }
+  }
+}

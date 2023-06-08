@@ -1,0 +1,41 @@
+.social {
+  position: relative;
+  top: 1px;
+  right: 1px;
+
+  &-item {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-color: #171f2f;
+    border-radius: 30px;
+    cursor: pointer;
+    margin: 0 5px 0 0;
+    transition: background-color 150ms ease-in-out;
+    background-repeat: no-repeat;
+    background-position: center;
+    &:last-child {
+      margin: 0;
+    }
+
+    &:hover {
+      background-color: #3A4E75FF;
+    }
+
+    &_twitter {
+      background-image: url('../../../assets/images/socials/twitter.svg');
+    }
+
+    &_telegram {
+      background-image: url('../../../assets/images/socials/telegram.svg');
+    }
+
+    &_medium {
+      background-image: url('../../../assets/images/socials/medium.svg');
+    }
+
+    &_web {
+      background-image: url('../../../assets/images/socials/web.svg');
+    }
+  }
+}
