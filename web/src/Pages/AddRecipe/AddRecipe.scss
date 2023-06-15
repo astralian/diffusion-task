@@ -1,0 +1,183 @@
+.add-recipe-form {
+  &-back {
+    border-bottom: 1px solid #2E3347;
+    padding: 0 0 18px 0;
+    margin: 0 0 24px 0;
+
+    &-link {
+      font-family: 'Bai Jamjuree', serif;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 24px;
+      color: #fff;
+      text-decoration: none;
+      cursor: pointer;
+      display: inline-block;
+      background: url('./../../assets/images/back-arrow.svg') no-repeat 5px center;
+      padding: 0 0 0 25px;
+    }
+  }
+
+  &-in-label {
+    position: absolute;
+    font-family: 'Bai Jamjuree', serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 24px;
+    color: #E9EAF6;
+    right: 11px;
+    bottom: 8px;
+  }
+
+  &-fieldset {
+    display: flex;
+    width: 100%;
+    margin: 0 0 24px 0;
+
+    .add-recipe-form-field {
+      &:first-child {
+        margin: 0 6px 0 0;
+      }
+
+      &:last-child {
+        margin: 0 0 0 6px;
+      }
+
+      &_single {
+        margin: 0 !important;
+      }
+    }
+  }
+
+  &-field {
+    width: 100%;
+    position: relative;
+  }
+
+  &-label {
+    color: #FFF;
+    font-family: 'Bai Jamjuree', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    margin: 0 0 10px 0;
+  }
+
+  &-input {
+    background: #181F30;
+    border: 1px solid #50566f;
+    border-radius: 6px;
+    padding: 8px 11px;
+    width: 100%;
+    font-family: 'Bai Jamjuree', sans-serif;
+    font-size: 16px;
+    color: #E9EAF6;
+
+    &_textarea {
+      height: 72px;
+    }
+
+    &_volume {
+      padding-right: 60px;
+    }
+
+    &_serves {
+      padding-right: 68px;
+    }
+
+    &::placeholder {
+      color: #E9EAF6;
+    }
+  }
+
+  &-select {
+    &__control {
+      border: 1px solid #50566f !important;
+      background-color: #181F30 !important;
+      border-radius: 6px !important;
+    }
+
+    &__placeholder, &__single-value {
+      font-family: 'Bai Jamjuree', sans-serif;
+      font-size: 16px;
+      color: #E9EAF6 !important;
+    }
+
+    &__indicator-separator {
+      display: none;
+    }
+
+    &__menu {
+      border-radius: 6px;
+      box-shadow: none;
+      background-color: #181F30 !important;
+    }
+
+    &__option {
+      font-family: 'Bai Jamjuree', sans-serif;
+      font-size: 16px;
+      color: #E9EAF6 !important;
+      cursor: pointer !important;
+
+      &--is-focused {
+        background-color: #566793 !important;
+      }
+    }
+  }
+
+  &-limit {
+    font-family: 'Bai Jamjuree', serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    color: #43495E;
+    margin: 5px 0 0 0;
+
+    &_full {
+      color: #E9EAF6
+    }
+  }
+
+  &-submit {
+    width: 100%;
+    font-family: 'Bai Jamjuree', serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #E9EAF6;
+    background-color: #764AF4;
+    border-radius: 6px;
+    border: 0 none;
+    cursor: pointer;
+    padding: 9px 14px 11px;
+    height: 44px;
+
+    &_loading {
+      background-image: url('./../../assets/images/loader.svg');
+      background-repeat: no-repeat;
+      background-position: center center;
+    }
+
+    &:hover {
+      background: #9275ef;
+      transition: background-color 150ms ease-in-out;
+    }
+
+    &[disabled] {
+      background-color: #8e6cf1;
+      cursor: default;
+
+      &:hover {
+        background-color: #8e6cf1;
+        background-image: url('./../../assets/images/loader.svg');
+        background-repeat: no-repeat;
+        background-position: center center;
+      }
+    }
+  }
+}

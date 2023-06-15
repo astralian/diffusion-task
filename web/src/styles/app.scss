@@ -1,0 +1,19 @@
+html, body {
+  width: 410px;
+  min-height: 686px;
+  overflow: hidden;
+}
+.app {
+  background: #0D1119;
+  padding: 24px 23px 24px 24px;
+  width: 410px;
+  min-height: 686px;
+}
+
+input[type='number']::-webkit-outer-spin-button,
+input[type='number']::-webkit-inner-spin-button,
+input[type='number'] {
+  -webkit-appearance: none;
+  margin: 0;
+  -moz-appearance: textfield !important;
+}

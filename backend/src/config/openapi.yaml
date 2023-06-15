@@ -1,0 +1,123 @@
+openapi: 3.0.1
+info:
+  title: Recipes API
+  version: v1
+servers:
+  - url: http://localhost:3000
+tags:
+  - name: API functions
+    description: API functions of our application
+paths:
+  /recipes:
+    get:
+      summary: Retrieves a list of recipes available on the server.
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Recipe'
+  /recipes/search:
+    get:
+      summary: Retrieves a list of recipes available on the server.
+      parameters:
+        - name: query
+          in: query
+          description: Search query
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Recipe'
+  /recipes/random:
+    get:
+      summary: Retrieves a list of recipes available on the server.
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Recipe'
+  /recipes/{index}:
+    get:
+      parameters:
+        - name: index
+          in: path
+          required: true
+          schema:
+            type: number
+            example: 1
+      summary: Retrieves a specific recipe based on its index.
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Recipe'
+        '404':
+          description: Not Found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: 'RecipePage not found'
+
+  /recipes/number:
+    get:
+      summary: Retrieves the number of recipes available on the server.
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: number
+components:
+  schemas:
+    Recipe:
+      type: object
+      properties:
+        id:
+          type: number
+          readOnly: true
+        name:
+          type: string
+        origin:
+          type: string
+        description:
+          type: string
+        difficulty:
+          type: number
+        protein:
+          type: string
+        produce:
+          type: string
+        spice:
+          type: string
+        cookingOil:
+          type: string
+        volume:
+          type: number
+        serves:
+          type: number
+        authenticity:
+          type: string
+        stock:
+          type: string

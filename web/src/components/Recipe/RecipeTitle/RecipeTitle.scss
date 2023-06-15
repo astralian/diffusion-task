@@ -1,0 +1,48 @@
+.title {
+  &-container {
+    margin: 20px 0 23px 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+
+  &-value {
+    color: #FFF;
+    font-family: 'Helvetica Neue', serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    display: flex;
+    align-items: center;
+  }
+
+  &-text {
+    display: block;
+    margin: 0 0 0 10px;
+    white-space: nowrap;
+  }
+
+  &-sidebar {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.add-recipe {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #171f2f;
+  transition: background-color 150ms ease-in-out;
+  font-family: 'Helvetica Neue', sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  color: #FFFFFF;
+  text-decoration: none;
+  padding: 5px 7px;
+  margin: 0 0 0 2px;
+
+  &:hover {
+    background: #3A4E75FF;
+  }
+}

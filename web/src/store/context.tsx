@@ -1,6 +1,6 @@
 import React, { createContext, useReducer, PropsWithChildren } from 'react';
-import { IInitialState } from './../types';
-import mainReducer from './../reducers/mainReducer';
+import { IInitialState } from '../types';
+import mainReducer from '../reducers/mainReducer';
 import { RecipeActions } from '../reducers/recipeReducer';
 
 

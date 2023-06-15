@@ -1,0 +1,78 @@
+.search-form {
+  &-result {
+    &-item {
+      display: flex;
+      justify-content: space-between;
+      color: #fff;
+      cursor: pointer;
+      font-family: 'Bai Jamjuree', serif;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 20px;
+      padding: 6px;
+      transition: background-color 150ms ease-in-out;
+      align-items: center;
+      position: relative;
+      margin: 0 0 5px 0;
+
+      &:last-child {
+        margin: 0;
+      }
+
+      &-name {
+        display: flex;
+        align-items: center;
+      }
+
+      &:hover {
+        background-color: #181F30;
+      }
+
+      &-difficulty {
+        font-weight: bold;
+        position: relative;
+        font-size: 14px;
+
+        &_easy {
+          &:before {
+            background-color: #6CF700;
+          }
+        }
+
+        &_medium {
+          &:before {
+            background-color: #F63B00;
+          }
+        }
+
+        &_hard {
+          &:before {
+            background-color: #FF003D;
+          }
+        }
+
+        &:before {
+          content: " ";
+          width: 12px;
+          height: 12px;
+          position: absolute;
+          top: 5px;
+          left: -20px;
+        }
+
+        &:after {
+          content: " ";
+          overflow: hidden;
+          background: #181F30;
+          width: 7px;
+          height: 7px;
+          top: 13px;
+          left: -11px;
+          rotate: 45deg;
+          position: absolute;
+        }
+      }
+    }
+  }
+}

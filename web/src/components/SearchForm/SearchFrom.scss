@@ -1,0 +1,67 @@
+.search-form {
+  position: relative;
+
+  &-result {
+    background-color: #121826;
+    position: absolute;
+    top: 48px;
+    width: 100%;
+    padding: 8px;
+    border-radius: 6px;
+    z-index: 2;
+    box-shadow: 0 10px 30px 3px rgba(0, 0, 0, 0.4);
+  }
+
+  &-error {
+    color: #ff5b5b;
+    font-family: 'Helvetica Neue', sans-serif;
+    position: absolute;
+    font-size: 12px;
+    bottom: -18px;
+    width: 100%;
+    text-align: center;
+  }
+
+  &_loading {
+    &:after {
+      position: absolute;
+      right: 6px;
+      top: 6px;
+      content: " ";
+      width: 30px;
+      height: 30px;
+      background: url('./../../assets/images/loader.svg') no-repeat;
+    }
+  }
+
+  &-input {
+    border-radius: 6px;
+    background: #131823 url('./../../assets/images/search-ico.svg') no-repeat 13px center;
+    font-family: 'Helvetica Neue', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #FFF;
+    padding: 9px 20px 7px 40px;
+    width: 100%;
+    border: 1px solid #5B6178;
+    transition: border-color 150ms ease-in-out, background-color 150ms ease-in-out;
+
+    &_error {
+      border-color: #ff5b5b;
+    }
+
+    &::placeholder {
+      color: #7185AA;
+    }
+
+    &:focus {
+      box-shadow: 0 0 0 4px #B89FFF, inset 0 0 0 1px #663CDD;
+    }
+
+    &:focus-visible {
+      outline: none;
+    }
+  }
+}

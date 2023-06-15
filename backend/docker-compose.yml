@@ -1,0 +1,15 @@
+version: '3'
+services:
+  db:
+    image: mysql:8
+    env_file: .env
+    container_name: recipes-db
+    environment:
+      - MYSQL_DATABASE=${MYSQL_DATABASE}
+      - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
+      - MYSQL_USER=${MYSQL_USER}
+      - MYSQL_PASSWORD=${MYSQL_PASSWORD}
+    volumes:
+      - ./:/docker-entrypoint-initdb.d
+    ports:
+      - "3306:3306"

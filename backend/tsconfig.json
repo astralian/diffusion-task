@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "lib": ["dom", "es6"],
+    "sourceMap": true /* Generates corresponding '.map' file. */,
+    "outDir": "dist" /* Redirect output to the directory. */,
+    "rootDir": "./../" /* Specify the root directory of input files. Use to control the output directory structure with --outDir. */,
+    "moduleResolution": "node" /* Specify module resolution strategy: 'node' (Node.js) or 'classic' (TypeScript pre-1.6). */,
+    "experimentalDecorators": true /* Enables experimental support for ES7 decorators. */,
+    "emitDecoratorMetadata": true /* Enables experimental support for emitting type metadata for decorators. */,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "checkJs": false,
+    "resolveJsonModule": true
+  },
+  "compileOnSave": true,
+  "exclude": ["node_modules", "src/migrations", "src/seeders", "src/models/index.js"],
+  "include": ["src/**/*.ts",
+    "./src/config/db.js"
+  ]
+}
